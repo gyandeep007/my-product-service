@@ -3,12 +3,14 @@ package com.example.myproductservice.controller;
 import com.example.myproductservice.model.ProductCategories;
 import com.example.myproductservice.service.ProductCategoriesService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/product-category")
+@RequestMapping("/category")
 public class ProductCategoryController {
 
     private ProductCategoriesService productCategoriesService;
@@ -26,7 +28,7 @@ public class ProductCategoryController {
 
     @GetMapping
     public List<ProductCategories> getAllProductCategory(){
-        return productCategoriesService.getAllProductCategory();
+      return productCategoriesService.getAllProductCategory();
     }
 
     @PutMapping
