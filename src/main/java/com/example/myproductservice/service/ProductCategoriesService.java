@@ -22,6 +22,9 @@ public class ProductCategoriesService {
     public ProductCategories getProductCategoryById(int productCategory){
         return productCategoriesRepository.findById(productCategory).get();
     }
+    public List<ProductCategories> getProductCategoryByIdGreaterThan(int productCategory){
+        return productCategoriesRepository.findProductCategoriesByCategoryIdGreaterThanEqual(productCategory);
+    }
 
     public List<ProductCategories> getAllProductCategory(){
         return productCategoriesRepository.findAll();
@@ -29,5 +32,9 @@ public class ProductCategoriesService {
 
     public ProductCategories updateProductCategory(ProductCategories productCategories){
       return   productCategoriesRepository.save(productCategories);
+    }
+
+    public ProductCategories getProductCategoryByName(String productName) {
+      return   productCategoriesRepository.findProductCategoriesByCategoryNameEquals(productName);
     }
 }

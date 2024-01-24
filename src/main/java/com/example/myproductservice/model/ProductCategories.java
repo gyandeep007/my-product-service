@@ -3,10 +3,7 @@ package com.example.myproductservice.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -19,4 +16,12 @@ public class ProductCategories {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer categoryId;
     private String categoryName;
+    @Transient
+    private String description;
+
+    @PostLoad
+    public void setDescription(){
+        description  = categoryId%2==0?"even product":"odd product";
+
+    }
 }
