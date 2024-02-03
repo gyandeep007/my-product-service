@@ -1,0 +1,50 @@
+[
+  {
+  "productId": "1",
+  "name": "car",
+  "description": "this is a four wheeler vehicle and used for travelling",
+  "unit": "piece",
+  "price": 100000
+ },
+  {
+    "productId": "2",
+    "name": "bike",
+    "description": "this is a two wheeler vehicle",
+    "unit": "piece",
+    "price": 5000
+  },
+  {
+    "productId": "3",
+    "name": "cooler",
+    "description": "this is a a machine which gives coolness",
+    "unit": "piece",
+    "price": 2000
+  },
+  {
+    "productId": "4",
+    "name": "pen",
+    "description": "this is used to write",
+    "unit": "piece",
+    "price": 10
+  },
+  {
+    "productId": "5",
+    "name": "suger",
+    "description": "this is used to eat for sweetness",
+    "unit": "kg",
+    "price": 50
+  }, {
+  "productId": "6",
+  "name": "laptop",
+  "description": "this is used to work",
+  "unit": "piece",
+  "price": 100000
+},
+  {
+    "productId": "7",
+    "name": "bed",
+    "description": "this is used to eat to sleep",
+    "unit": "piece",
+    "price": 6000
+  }
+]
