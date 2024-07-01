@@ -2,20 +2,25 @@ package com.example.myproductservice.controller;
 
 import com.example.myproductservice.model.ProductCategories;
 import com.example.myproductservice.service.ProductCategoriesService;
+import com.github.javafaker.Faker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("/product-category")
 public class ProductCategoryController {
 
+
     private ProductCategoriesService productCategoriesService;
+
 
     @Autowired
     public ProductCategoryController(ProductCategoriesService productCategoriesService) {
         this.productCategoriesService = productCategoriesService;
+
     }
 
 
@@ -32,5 +37,18 @@ public class ProductCategoryController {
     @PutMapping
     public ProductCategories updateProductCategory(@RequestBody ProductCategories productCategories){
         return   productCategoriesService.updateProductCategory(productCategories);
+    }
+
+    @PostMapping
+    public void createProductCategory(){
+
+
+
+        productCategoriesService.addProductCategory();
+    }
+
+    @GetMapping("/search")
+    public ProductCategories searchByDescription(@RequestParam String description){
+        return productCategoriesService.searchByDescription(description);
     }
 }
